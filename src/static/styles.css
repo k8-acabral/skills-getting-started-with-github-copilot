@@ -108,6 +108,61 @@ button:hover {
   background-color: #3949ab;
 }
 
+.participants {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #eef4ff;
+  border: 1px solid #d3e2ff;
+  border-radius: 6px;
+}
+
+.participants-title {
+  margin-bottom: 10px;
+  color: #1a237e;
+}
+
+.participants-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.participant-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(26, 35, 126, 0.08);
+}
+
+.participant-item:last-child {
+  border-bottom: none;
+}
+
+.participant-remove {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.participant-remove:hover {
+  background-color: rgba(198, 40, 40, 0.12);
+}
+
+.no-participants {
+  margin: 0;
+  color: #5f6c87;
+  font-style: italic;
+}
+
 .message {
   margin-top: 20px;
   padding: 10px;
