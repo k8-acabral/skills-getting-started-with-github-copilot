@@ -98,6 +98,11 @@ def signup_for_activity(activity_name: str, email: str):
     # Get the specific activity
     activity = activities[activity_name]
 
+    # Validate email domain
+    email_parts = email.split("@")
+    if len(email_parts) != 2 or email_parts[1].lower() != "mergington.edu":
+        raise HTTPException(status_code=400, detail="Only @mergington.edu email addresses may register")
+
     # Validate student is not already signed up
     if email in activity["participants"]:
         raise HTTPException(status_code=400, detail="Student already signed up for this activity")
